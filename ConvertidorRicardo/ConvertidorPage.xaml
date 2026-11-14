@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConvertidorRicardo.ConvertidorPage"
+             Title= "Convertidor">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+           
+            <Label
+                Text="Primer Numero"
+                FontAttributes="Bold"/>
+
+            <Entry
+                x:Name="EntryTemp"
+                Placeholder="Ingrese la temperatura"
+                Keyboard="Numeric"/>
+
+            <!-- de radio buttons para seleccionar la operacion a realizar-->
+            <Label 
+                Text="Operacion:"
+                FontAttributes="Bold"/>
+
+            <Grid 
+                ColumnDefinitions="*,*,*,*"
+                RowDefinitions="Auto,Auto">
+
+                <RadioButton
+                x:Name="RadioCaF"
+                Grid.Column="0"
+                Grid.Row="0"
+                Content="C a F"
+                GroupName="Operacion"
+                CheckedChanged="OnOperacionCambiada"/>
+
+                <RadioButton
+                x:Name="RadioFaC"
+                Grid.Column="1"
+                Grid.Row="0"    
+                Content="F a C"
+                GroupName="Operacion"
+                CheckedChanged="OnOperacionCambiada"/>
+
+            </Grid>
+
+            <Button 
+                Text="Calcular" 
+                Clicked="OnCalcularClicked"
+                BackgroundColor="#512BD4"
+                TextColor="White"/>
+
+
+            <Label
+                x:Name="lblResultado"
+                Text="Resultado: "
+                FontSize="20"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConvertidorRicardo.MainPage"
+             Title= "Calculadora">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+                Text="Primer Numero"
+                FontAttributes="Bold"/>
+            <Entry
+                x:Name="EntryNumero1"
+                Placeholder="Ingrese el primer numero"
+                Keyboard="Numeric"/>
+
+
+            <Label
+                Text="Segundo Numero"
+                FontAttributes="Bold"/>
+            <Entry
+                x:Name="EntryNumero2"
+                Placeholder="Ingrese el segundo numero"
+                Keyboard="Numeric"/>
+
+            <!-- de radio buttons para seleccionar la operacion a realizar-->
+            <Label 
+                Text="Operacion:"
+                FontAttributes="Bold"/>
+
+            <Grid 
+                ColumnDefinitions="*,*,*,*"
+                RowDefinitions="Auto,Auto">
+
+                <RadioButton
+                x:Name="RadioSuma"
+                Grid.Column="0"
+                Grid.Row="0"
+                Content="Suma (+)"
+                GroupName="Operacion"
+                CheckedChanged="OnOperacionCambiada"/>
+
+                <RadioButton
+                x:Name="RadioResta"
+                Grid.Column="1"
+                Grid.Row="0"    
+                Content="Resta (-)"
+                GroupName="Operacion"
+                CheckedChanged="OnOperacionCambiada"/>
+
+                <RadioButton
+                x:Name="RadioMultiplicacion"
+                Grid.Column="2"
+                Grid.Row="1"
+                Content="Multiplicación (*)"
+                GroupName="Operacion"
+                CheckedChanged="OnOperacionCambiada"/>
+
+                <RadioButton
+                x:Name="RadioDivision"
+                Grid.Column="3"
+                Grid.Row="1"
+                Content="División (/)"
+                GroupName="Operacion"
+                CheckedChanged="OnOperacionCambiada"/>
+
+            </Grid>
+
+
+
+            <Button 
+                Text="Calcular" 
+                Clicked="OnCalcularClicked"
+                BackgroundColor="#512BD4"
+                TextColor="White"/>
+
+
+            <Label
+                x:Name="LabelResultado"
+                Text="Resultado: "
+                FontSize="20"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

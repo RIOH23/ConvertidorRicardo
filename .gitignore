@@ -1,0 +1,36 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.slnx.user
+
+# Carpetas de compilación y caché de .NET
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Paquetes NuGet y restauración
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Instaladores y paquetes de .NET MAUI (Android, Windows, iOS)
+*.apk
+*.aab
+*.ipa
+*.appx
+*.msix
+*.msixbundle
+*.appxupload
+AppPackages/
+BundleArtifacts/
+
+# Pruebas y archivos del sistema operativo
+TestResults/
+.DS_Store
+Thumbs.db
